@@ -49,3 +49,14 @@ This is a raw template that will get you started coding an extension.
 I have put comments in the code to help you understand what to do.
 
 You may need to rename some file and directory names to fit your needs.
+
+Usage for the end user:
+```py
+import interactions
+
+client = interactions.Client(...)
+...
+extension = client.load("interactions.ext.import_name", ...)  # the user can input arguments, btw
+...
+client.start()
+```
