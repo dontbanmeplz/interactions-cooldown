@@ -23,6 +23,6 @@ setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-        "discord-py-interactions>=4.1.0"  # the version of discord-py-interactions you depend on
+        "discord-py-interactions>=4.0.2"  # the version of discord-py-interactions you depend on
     ],  # you can add more dependencies here
 )
