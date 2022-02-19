@@ -4,7 +4,7 @@ This is a quickstart and api docs for this module
 ## Quickstart
 ```python
 import interactions
-import interactions.ext.cooldown
+import interactions.ext.cooldowns
 guild_id = 0
 token = ""
 #create bot
@@ -19,7 +19,7 @@ async def error(ctx, t):
     scope=guild_id,
 )
 #define cooldown function and time of cooldown
-@cooldown.cooldown(error, 10)
+@cooldowns.cooldown(error, 10)
 async def my_first_command(ctx: interactions.CommandContext):
   await ctx.send("Hi there!")
 #start bot
