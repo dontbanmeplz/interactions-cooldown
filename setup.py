@@ -6,14 +6,14 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 # data for pypi
 data = {
-    "name": "interactions.ext.import_name",  # the name of the extension
+    "name": "interactions.ext.cooldowns",  # the name of the extension
     "description": "description",  # the short description of the extension
     "long_description": long_description,  # the long description of the extension, taken from README.md
     "version": Version(
         version="1.0.0",
-        author=VersionAuthor(name="github_username_here", email="example@email.domain"),
+        author=VersionAuthor(name="dontbanmeplz", email="example@email.domain"),
     ),  # the version of the extension
-    "link": "https://github.com/username/repo",  # the link to the extension's repo
+    "link": "https://github.com/dontbanmeplz/interactions-cooldown",  # the link to the extension's repo
 }
 
 
