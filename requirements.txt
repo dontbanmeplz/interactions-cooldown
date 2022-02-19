@@ -1,7 +1,1 @@
-discord-py-interactions>=4.1.0
-add
-more
-dependencies
-separated
-by
-newlines
+git+https://github.com/interactions-py/library@unstable
