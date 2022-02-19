@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 # sets up the pypi package
 setup(
     name="interactions-cooldowns",  # package name on pypi, also install name for pip
-    version="1.0.2",  # this is the version of the extension
+    version="1.0.3",  # this is the version of the extension
     description="description",  # the short description of the extension
     long_description=long_description,  # the long description of the extension, taken from README.md
     long_description_content_type="text/markdown",
