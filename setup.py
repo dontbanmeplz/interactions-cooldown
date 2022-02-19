@@ -1,26 +1,28 @@
-from interactions.ext import Base, build, Version, VersionAuthor
+from setuptools import setup
 
 # gets the long description from the README file
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-# data for pypi
-data = {
-    "name": "interactions.ext.cooldowns",  # the name of the extension
-    "description": "description",  # the short description of the extension
-    "long_description": long_description,  # the long description of the extension, taken from README.md
-    "version": Version(
-        version="1.0.1",
-        author=VersionAuthor(name="dontbanmeplz", email="example@email.domain"),
-    ),  # the version of the extension
-    "link": "https://github.com/dontbanmeplz/interactions-cooldown",  # the link to the extension's repo
-}
-
-
-class MyThirdParty(Base):
-    def __init__(self):
-        super().__init__(**data)
-
-
-library = MyThirdParty()
-build(library)
+# sets up the pypi package
+setup(
+    name="interactions-cooldowns",  # package name on pypi, also install name for pip
+    version="1.0.0",  # this is the version of the extension
+    description="description",  # the short description of the extension
+    long_description=long_description,  # the long description of the extension, taken from README.md
+    long_description_content_type="text/markdown",
+    url="https://github.com/dontbanmeplz/interactions-cooldowns",  # put your github repo link here
+    author="dontbanmeplz",  # pypi username
+    author_email="example@email.domain",  # pypi email
+    license="MIT",  # change/choose a license here, dont forget to change LICENSE file
+    packages=["interactions.ext.cooldowns"],
+    classifiers=[  # change this according to pypi
+        "Programming Language :: Python :: 3",
+        "Development Status :: 4 - Beta",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    install_requires=[
+        "git+https://github.com/interactions-py/library@unstable"  # the version of discord-py-interactions you depend on
+    ],  # you can add more dependencies here
+)
