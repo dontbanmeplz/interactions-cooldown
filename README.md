@@ -9,7 +9,7 @@ guild_id = 0
 token = ""
 #create bot
 bot = interactions.Client(token=token)
-#create function on colldown fail
+#create function on cooldown fail
 async def error(ctx, t):
   await ctx.send(f"Wait {t} secconds")
 #command
