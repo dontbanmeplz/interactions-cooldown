@@ -10,7 +10,7 @@ data = {
     "description": "description",  # the short description of the extension
     "long_description": long_description,  # the long description of the extension, taken from README.md
     "version": Version(
-        version="1.0.0",
+        version="1.0.1",
         author=VersionAuthor(name="dontbanmeplz", email="example@email.domain"),
     ),  # the version of the extension
     "link": "https://github.com/dontbanmeplz/interactions-cooldown",  # the link to the extension's repo
