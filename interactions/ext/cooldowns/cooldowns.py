@@ -1,7 +1,9 @@
 import time
 from functools import wraps
 class cooldown:
-    def __init__(self, function, cal:"function"=None, cool:int=10):
+    def __init__(self, function, cal:"function"=None, cool:int=10, typ="user"):
+        if typ not in ["user", "guild", "channel"]:
+            exit()
         self.function = function
         self.js = {}
         self.cool = cool
@@ -10,12 +12,19 @@ class cooldown:
         jsondata = [obj for obj in self.js if time.time()- self.js[obj] >= self.cool]
         self.js = jsondata
     def data(self, ctx):
+        typ = self.typ
         js = self.js
+        if typ == "user":
+            id = str(ctx.author.user.id)
+        elif typ == "channel":
+            id = str(ctx.channel.id)
+        elif typ == "guild":
+            id = str(ctx.guild.id)
         try:
-            data = js[str(ctx.author.user.id)]
+            data = js[id]
         except:
             t = time.time()
-            js[str(ctx.author.user.id)] = t
+            js[id] = t
             return (True, t)
         if time.time()-data >= self.cool:
             data = time.time()
