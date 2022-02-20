@@ -27,9 +27,15 @@ bot.start()
 ```
 ## api
 ### cooldown.cooldown()
-#### error
+### error
 error function, leave `None` for placeholder
-#### time
+### time
 time of cooldown
+### type
+guild
+
+user
+
+channel
 #### _clean_timers
 cleans all timers
