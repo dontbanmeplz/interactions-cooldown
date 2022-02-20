@@ -19,7 +19,7 @@ async def error(ctx, t):
     scope=guild_id,
 )
 #define cooldown function and time of cooldown
-@cooldowns.cooldown(error, 10)
+@cooldowns.cooldown(error, 10, "user")
 async def my_first_command(ctx: interactions.CommandContext):
   await ctx.send("Hi there!")
 #start bot
