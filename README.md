@@ -1,3 +1,5 @@
+# installing
+`pip install interactions.cooldowns`
 # cooldowns
 This is a quickstart and api docs for this module
 
